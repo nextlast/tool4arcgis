@@ -8,6 +8,7 @@ cur=None
 try:
     txt=arcpy.GetParameterAsText(0)
     outfc=arcpy.GetParameterAsText(1)
+#https://resources.arcgis.com/en/help/main/10.1/018z/pdf/projected_coordinate_systems.pdf
     spatial=arcpy.SpatialReference(4528)
     txtfile=open(txt)
     arcpy.CreateFeatureclass_management(os.path.dirname(outfc),os.path.basename(outfc),"POLYGON","", "", "",spatial)
