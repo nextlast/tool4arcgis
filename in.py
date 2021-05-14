@@ -23,7 +23,7 @@ try:
 
     for line in txtfile.readlines():
         values = line.replace("\n", "").replace("\r", "").split(",")
-        if len(values) >= 9 and values[len(values)-1].strip() == "@" and featno== 0:
+        if len(values) >= 8 and values[len(values)-1].strip() == "@" and featno== 0:
             featno+=1
             ringid=-1
 
@@ -42,7 +42,7 @@ try:
             arr.add(p)
             ringid=values[1]
 
-        elif len(values) >= 9 and values[len(values)-1].strip() == "@" and featno>=1:
+        elif len(values) >= 8 and values[len(values)-1].strip() == "@" and featno>=1:
             array.add(arr)
             cur.insertRow([arcpy.Polygon(array)])
             array.removeAll()
