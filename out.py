@@ -19,7 +19,7 @@ def getlst(row):
         
         for point in part:
             if point:
-                lst.append([showno,partno,point.Y,point.X])
+                lst.append([showno,partno,round(point.Y,3),round(point.X,3)])
 		showno+=1
             else:
                 lastof=len(lst)-1
