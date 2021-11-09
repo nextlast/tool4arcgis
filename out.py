@@ -20,13 +20,12 @@ def getlst(row):
         for point in part:
             if point:
                 lst.append([showno,partno,point.Y,point.X])
+		showno+=1
             else:
                 lastof=len(lst)-1
                 lst[lastof][0]=startno
                 startno=showno
-                showno-=1
                 partno+=1
-            showno+=1
         lastof=len(lst)-1
         lst[lastof][0]=startno   
         partno=(partno//100+1)*100+1
