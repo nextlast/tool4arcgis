@@ -29,7 +29,7 @@ def getlst(row):
             showno+=1
         lastof=len(lst)-1
         lst[lastof][0]=startno   
-        partno+=1
+        partno=(partno//100+1)*100+1
     return lst
 
 
