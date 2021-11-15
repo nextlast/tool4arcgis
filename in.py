@@ -87,7 +87,6 @@ except Exception as e:
         arcpy.AddError(err)
     elif str(e)!="":
         arcpy.AddError(str(e))
-    arcpy.AddError(arcpy.GetMessages(2))
 finally:
     if cur:
         del cur
