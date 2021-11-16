@@ -54,7 +54,7 @@ if spatial_ref.name=="CGCS2000_3_Degree_GK_Zone_40":
     fo.write(u2g(a1+a2+a3+a4+a5+a6+a7+a8+a9))
     for row in arcpy.da.SearchCursor(shpfile,["OID@","SHAPE@"]):
 
-        fo.write("{},{},{},{},{},,,,@\n".format(row[1].pointCount,int(row[1].area),row[0],row[0],u2g("面")))
+        fo.write("{},{},{},{},{},,,,@\n".format(row[1].pointCount,round(row[1].area/10000,4),row[0],row[0],u2g("面")))
         lst=getlst(row)
         for a in lst:
 	     fo.write("{},{},{},{}\n".format(a[0],a[1],a[2],a[3]))
